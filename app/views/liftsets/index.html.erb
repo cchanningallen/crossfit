@@ -1,0 +1,33 @@
+<h1>Listing liftsets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Setnum</th>
+      <th>Weight</th>
+      <th>Reps</th>
+      <th>Lift</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @liftsets.each do |liftset| %>
+      <tr>
+        <td><%= liftset.setnum %></td>
+        <td><%= liftset.weight %></td>
+        <td><%= liftset.reps %></td>
+        <td><%= liftset.lift_id %></td>
+        <td><%= link_to 'Show', liftset %></td>
+        <td><%= link_to 'Edit', edit_liftset_path(liftset) %></td>
+        <td><%= link_to 'Destroy', liftset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Liftset', new_liftset_path %>

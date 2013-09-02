@@ -1,0 +1,33 @@
+<%= form_for(@liftset) do |f| %>
+  <% if @liftset.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@liftset.errors.count, "error") %> prohibited this liftset from being saved:</h2>
+
+      <ul>
+      <% @liftset.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :setnum %><br>
+    <%= f.number_field :setnum %>
+  </div>
+  <div class="field">
+    <%= f.label :weight %><br>
+    <%= f.text_field :weight %>
+  </div>
+  <div class="field">
+    <%= f.label :reps %><br>
+    <%= f.number_field :reps %>
+  </div>
+  <div class="field">
+    <%= f.label :lift_id %><br>
+    <%= f.number_field :lift_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

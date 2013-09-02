@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Setnum:</strong>
+  <%= @liftset.setnum %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @liftset.weight %>
+</p>
+
+<p>
+  <strong>Reps:</strong>
+  <%= @liftset.reps %>
+</p>
+
+<p>
+  <strong>Lift:</strong>
+  <%= @liftset.lift_id %>
+</p>
+
+<%= link_to 'Edit', edit_liftset_path(@liftset) %> |
+<%= link_to 'Back', liftsets_path %>

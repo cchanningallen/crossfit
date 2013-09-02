@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130901173920) do
+ActiveRecord::Schema.define(version: 20130902214907) do
+
+  create_table "lifts", force: true do |t|
+    t.string   "name"
+    t.integer  "sets"
+    t.text     "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "liftsets", force: true do |t|
+    t.integer  "setnum"
+    t.float    "weight"
+    t.integer  "reps"
+    t.integer  "lift_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "username"
