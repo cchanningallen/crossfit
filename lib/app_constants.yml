@@ -1,0 +1,188 @@
+wods    type:
+detail: 
+:
+  Angie:
+    description:|
+      100 Pull-ups
+      100 Push-ups
+      100 Sit-ups
+      100 Squats 
+      For Time
+      Complete all reps of each exercise before moving to the next.
+    type: time
+    detail: 
+
+  Barbara:
+    description:|
+      20 Pull-ups
+      30 Push-ups
+      40 Sit-ups
+      50 Squats
+      Rest precisely three minutes between each round.
+      5 rounds, time each round
+    type: rounds-time
+    detail: 5
+
+  Chelsea:
+    description:|
+      5 Pull-ups
+      10 Push-ups
+      15 Squats
+      Each min on the min for 30 min
+    type: completion
+    detail: 
+
+  Cindy:
+    description:|
+      5 Pull-ups
+      10 Push-ups
+      15 Squats
+      As many rounds as possible in 20 min
+    type: rounds
+    detail: 
+
+  Diane:
+    description:|
+      Deadlift 225 lbs
+      Handstand push-ups
+      21-15-9 reps, for time
+    type: time
+    detail: 
+
+  Elizabeth:
+    description:|
+      Clean 135 lbs
+      Ring Dips
+      21-15-9 reps, for time
+    type: time
+    detail: 
+
+  Fran:
+    description:|
+      Thruster 95 lbs
+      Pull-ups
+      21-15-9 reps, for time
+    type: time
+    detail: 
+
+  Grace:
+    description:|
+      Clean and Jerk 135 lbs
+      30 reps for time
+    type: time
+    detail: 
+
+  Helen:
+    description:|
+      400 meter run
+      1.5 pood Kettlebell swing x 21
+      Pull-ups 12 reps
+      3 rounds for time
+    type: time
+    detail: 
+
+  Isabel:
+    description:|
+      Snatch 135 pounds
+      30 reps for time
+    type: time
+    detail: 
+
+  Jackie:
+    description:|
+      1000 meter row
+      Thruster 45 lbs (50 reps)
+      Pull-ups (30 reps)
+      For time
+    type: time
+    detail: 
+
+  Karen:
+    description:|
+      Wall-ball 150 shots
+      For time
+    type: time
+    detail: 
+
+  Linda (aka “3 bars of death”):
+    description:|
+      Deadlift 1 1/2 BW
+      Bench BW
+      Clean 3/4 BW
+      10/9/8/7/6/5/4/3/2/1 rep
+      rounds for time
+    type: time
+    detail: 
+
+  Mary:
+    description:|
+      5 Handstand push-ups
+      10 1-legged squats
+      15 Pull-ups
+      As many rounds as possible in 20 min
+    type: rounds
+    detail: 
+
+  Nancy:
+    description:|
+      400 meter run
+      Overhead squat 95 lbs x 15
+      5 rounds for time
+      The New Girls
+    type: time
+    detail: 
+
+  Annie:
+    description:|  
+      Double-unders
+      Sit-ups
+      50-40-30-20 and 10 rep rounds; for time
+    type: time
+    detail: 
+
+  Eva:
+    description:|  
+      Run 800 meters
+      2 pood KB swing, 30 reps
+      30 pullups
+      5 rounds for time.
+    type: time
+    detail: 
+
+  Kelly:
+    description:|  
+      Run 400 meters
+      30 box jump, 24 inch box
+      30 Wall ball shots, 20 pound ball
+      Five rounds for time
+    type: time
+    detail: 
+
+  Lynne:
+    description:|  
+      Bodyweight bench press (e.g., same amount on bar as you weigh)
+      pullups
+      5 rounds for max reps. There is NOtime component to this WOD, although some versions Rx the movements as a couplet.
+    type: rounds-score
+    detail: 
+
+  Nicole:
+    description:|  
+      Run 400 meters
+      Max rep Pull-ups
+      As many rounds as possible in 20 minutes.
+      Note number of pull-ups completed for each round.
+    type: rounds
+    detail: 
+
+  Amanda:
+    description:|  
+      9, 7 and 5 reps of:
+      Muscle-ups
+      Snatches (135/95 lb.)
+      For Time
+    type: time
+    detail:
+
+
+

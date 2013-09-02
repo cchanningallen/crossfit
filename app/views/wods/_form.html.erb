@@ -1,0 +1,53 @@
+<div class="text-center detail-view-header">
+  <h1><%= action == "create" ? "New" : "Editing" %> WOD</h1>
+</div>
+
+<%= form_for [@user,@wod], html:{ role: 'form', class: 'form-horizontal' } do |f| %>
+  <% if @wod.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wod.errors.count, "error") %> prohibited this wod from being saved:</h2>
+
+      <ul>
+      <% @wod.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name, class: "col-lg-2 control-label" %>
+    <div class="col-lg-9">
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :wod_type, class: "col-lg-2 control-label" %>
+    <div class="col-lg-9">
+      <%= f.text_field :wod_type, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :score, class: "col-lg-2 control-label" %>
+    <div class="col-lg-9">
+      <%= f.text_field :score, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :rx, class: "col-lg-2 control-label" %>
+    <div class="col-lg-9">
+      <%= f.check_box :rx, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :notes, class: "col-lg-2 control-label" %>
+    <div class="col-lg-9">
+      <%= f.text_field :notes, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group submit-btn-container">
+    <%= f.submit "#{action.capitalize} WOD", class: "btn btn-primary btn-block submit-btn" %>
+  </div>
+<% end %>
+
+<div hidden class="wod-descriptions">hidden div is accessible</div>

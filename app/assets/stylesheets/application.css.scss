@@ -1,0 +1,105 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ *= require jasny-bootstrap
+ */
+
+@import "twitter/bootstrap";
+@import "colors";
+
+body{ padding-top: 50px; } // accomodates fixed header
+.col{ padding: 0 !important; } // yuck done.  overrides all column padding
+.row{ margin: 0 !important; } // fuuucking BS let me be flat & flush!
+
+.navbar-inverse{
+  background-color: $e;
+  border-color: $e;
+  margin-bottom: 0;
+}
+
+.navbar-inverse .navbar-brand{
+  color: $a;
+}
+
+.btn{
+  border-radius: 0;
+  height: 100%;
+  color: $c;
+
+  &:visited{
+    color: $c;
+  }
+}
+
+.btn-primary{
+  background-color: $b;
+  border-color: $b; 
+}
+
+.content-frame{  
+  .add-btn-group{
+    .add-btn{
+      height:80px;
+      width:50%;
+
+      margin-left: 0;
+      padding: 5px 0 0 0;
+
+      font-size:50px;
+      font-weight: bolder;
+    }
+  }
+}
+
+.lists-header-frame,
+.lists-content-frame{
+  background-color: $d;
+}
+
+.lists-header{
+  background-color: $d;
+  color: $a;
+}
+
+.detail-view-frame{
+  border: 5px solid $a;
+  padding: 10px;
+  background-color: $d;
+  color: $a;
+
+  .detail-view-header h1{
+    margin-top: 10px;
+    margin-bottom: 15px
+  }  
+}
+
+
+.submit-btn-container{
+  margin-bottom: -57px !important;
+}
+
+.submit-btn{
+  font-size: 20px;
+}
+
+.table-wods{
+  background-color: $c;
+
+  .td-rx{
+    width: 20px;
+  }
+
+  .td-rx-true{
+    color: $f;
+    background-color: $b;
+  }
+}

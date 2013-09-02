@@ -1,0 +1,19 @@
+
+<table class="table table-hover table-wods">
+  <tbody>
+    <% @wods.each do |wod| %>
+      <tr>
+        <% if wod.rx == true %>
+          <td class="td-rx td-rx-true">Rx</td>
+        <% else %>
+          <td class="td-rx"></td>
+        <% end %>
+        <td><%= wod.name %></td>
+        <td class="text-center"><%= wod.score %></td>
+        <td class="text-center"><%= link_to '<span class="glyphicon glyphicon-remove"></span>'.html_safe, [@user, wod], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="text-center"><%= link_to '<span class="glyphicon glyphicon-pencil"></span>'.html_safe, edit_user_wod_path(@user, wod), remote: true %></td>
+        <td class="text-center"><%= link_to '<span class="glyphicon glyphicon-chevron-right"></span>'.html_safe, [@user, wod], remote: true %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

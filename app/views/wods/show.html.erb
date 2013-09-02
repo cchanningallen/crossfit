@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @wod.name %>
+</p>
+
+<p>
+  <strong>Wod type:</strong>
+  <%= @wod.wod_type %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @wod.score %>
+</p>
+
+<p>
+  <strong>Score type:</strong>
+  <%= @wod.score_type %>
+</p>
+
+<p>
+  <strong>Rx:</strong>
+  <%= @wod.rx %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @wod.notes %>
+</p>
+
+<%= link_to 'Edit', edit_user_wod_path(@user, @wod) %> |

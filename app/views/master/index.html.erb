@@ -1,0 +1,65 @@
+<div class="content-frame">
+  <div class="row">
+    <div class="col col-lg-8">
+      <div class="lists-frame">
+        <div class="row lists-header-frame">
+          <div class="col-lg-4 text-center header-lifts">
+            <div class="row">
+              <div class="col-lg-4"></div>
+              <div class="col-lg-4 lists-header">
+                <h4>Lifts</h4>
+              </div>
+              <div class="col-lg-4"></div>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center header-wods">
+            <div class="row">
+              <div class="col-lg-4"></div>
+              <div class="col-lg-4 lists-header">
+                <h4>WODs</h4>
+              </div>
+              <div class="col-lg-4"></div>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center header-logs">
+            <div class="row">
+              <div class="col-lg-4"></div>
+              <div class="col-lg-4 lists-header">
+                <h4>Log</h4>
+              </div>
+              <div class="col-lg-4"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row lists-content-frame">
+          <div class="col-lg-4">
+            Lifts coming soon!
+          </div>
+          <div class="col-lg-4">
+            <%= render template: 'wods/index' %>
+          </div>
+          <div class="col-lg-4">
+            Join of Lifts/WODs coming soon!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col col-lg-4">
+      <div class="btn-group btn-block add-btn-group">
+        <%= link_to "+ lift".html_safe, new_user_wod_path(@user), {class: "btn btn-primary add-btn new-lift-trigger", remote: true, 'data_toggle' =>  "modal", 'data-target' => '#createModal'} %>
+        <%= link_to "+ wod".html_safe, new_user_wod_path(@user), {class: "btn btn-primary add-btn new-wod-trigger", remote: true, 'data_toggle' =>  "modal", 'data-target' => '#createModal'} %>
+      </div>
+      <div class="detail-view-frame">
+        <%= render template: 'wods/show' %>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<div class="create-modal-frame">
+  <%= render 'create_modal' %>
+</div>
