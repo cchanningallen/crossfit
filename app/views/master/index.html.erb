@@ -51,7 +51,11 @@
         <%= link_to "+ wod".html_safe, new_user_wod_path(@user), {class: "btn btn-primary add-btn new-wod-trigger", remote: true, 'data_toggle' =>  "modal", 'data-target' => '#createModal'} %>
       </div>
       <div class="detail-view-frame">
-        <%= render template: 'wods/show' %>
+        <% unless @wod.nil? %>
+          <%= render template: 'wods/show' %>
+        <% else %>
+          <h1>Welcome to CrossFitApp!</h1>
+        <% end %>
       </div>
     </div>
   </div>
