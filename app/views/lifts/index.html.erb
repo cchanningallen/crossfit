@@ -29,3 +29,20 @@
 <br>
 
 <%= link_to 'New Lift', new_lift_path %>
+
+<table class="table table-hover table-lifts">
+  <tbody>
+    <% @lifts.each do |lift| %>
+      <tr>
+        <td><%= lift.name %></td>
+        <td class="text-center"><%= lift.sets %>x</td>
+        <td>
+          <% @liftsets_by_lift["#{lift.id}"] %>
+        </td>
+        <td class="text-center"><%= link_to '<span class="glyphicon glyphicon-remove"></span>'.html_safe, [@user, lift], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="text-center"><%= link_to '<span class="glyphicon glyphicon-pencil"></span>'.html_safe, edit_user_lift_path(@user, lift), remote: true %></td>
+        <td class="text-center"><%= link_to '<span class="glyphicon glyphicon-chevron-right"></span>'.html_safe, [@user, lift], remote: true %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

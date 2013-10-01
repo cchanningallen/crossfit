@@ -10,6 +10,10 @@ private
   end
   helper_method :current_user
 
+  def set_user
+    @user = User.find(params[:user_id])
+  end  
+
   def authorize
     redirect_to login_url, alert: "Please log in to continue." if current_user.nil?
   end

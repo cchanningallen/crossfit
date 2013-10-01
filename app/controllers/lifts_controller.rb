@@ -1,35 +1,53 @@
 class LiftsController < ApplicationController
+  before_filter :authorize
+  before_action :set_user
   before_action :set_lift, only: [:show, :edit, :update, :destroy]
+  before_action :set_liftsets, only: [:show, :edit, :update, :destroy]
 
   # GET /lifts
   # GET /lifts.json
   def index
-    @lifts = Lift.all
+    @lifts = @user.lifts.all
+    @liftsets_by_lift = @lifts.liftsets.all.group_by(&:lift_id)
+
   end
 
   # GET /lifts/1
   # GET /lifts/1.json
   def show
+    respond_to do |format|
+      format.html { render layout: false }
+      format.json
+    end  
   end
 
   # GET /lifts/new
   def new
-    @lift = Lift.new
+    @lift = @user.lift.build
+
+    respond_to do |format|
+      format.html { render layout: false }
+      format.json
+    end    
   end
 
   # GET /lifts/1/edit
   def edit
+    respond_to do |format|
+      format.html { render layout: false }
+      format.json
+    end    
   end
 
   # POST /lifts
   # POST /lifts.json
   def create
-    @lift = Lift.new(lift_params)
+    @lift = @user.lift.build(lift_params)
+    @liftsets = params['liftsets']
 
     respond_to do |format|
       if @lift.save
-        format.html { redirect_to @lift, notice: 'Lift was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @lift }
+        redirect_to 
       else
         format.html { render action: 'new' }
         format.json { render json: @lift.errors, status: :unprocessable_entity }
@@ -65,6 +83,10 @@ class LiftsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_lift
       @lift = Lift.find(params[:id])
+    end
+
+    def set_liftsets
+      @liftsets = @lift.liftsets.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

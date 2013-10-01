@@ -9,6 +9,8 @@ $('tr').ready(function(){
   show_in_detail_view($(this));
 });
 
+$('')
+
 // calls row link action for click anywhere in tr
 // $('.show-wod').ready(function(){
 //   var $tr = $(this)
@@ -24,8 +26,6 @@ $('tr').ready(function(){
 //     e.stopPropagation();
 //   });
 // });
-
-
 
 function show_in_detail_view(jqel){
   var $jqel = jqel;
